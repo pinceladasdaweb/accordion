@@ -10,7 +10,7 @@ Simple Accordion done in Vanilla JS.
 
 2. Minimum HTML to make it work:
 ```html
-<div class="accordion">
+<div class="js-accordion">
     <h2>Title here</h2>
     <div><!-- HTML here --></div>
     <h2>Title here</h2>
