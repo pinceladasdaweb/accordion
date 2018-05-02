@@ -7,29 +7,27 @@
 * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 ---------------*/
 window.onload = function () {
-    var acc = document.getElementsByClassName("accordion"),
-        i, j;
+    let acc = document.getElementsByClassName("js-accordion");
 
-    for(i = 0; i < acc.length; i++) {
-      var h2El = acc[i].getElementsByTagName("h2");
-      var size = h2El.length;
+    for(let i = 0; i < acc.length; i++) {
+      let titles = acc[i].getElementsByTagName("h2");
 
-      for (j = 0; j < size; j++) {
-          var h2Node = h2El[j];
+      for (let j = 0; j < titles.length; j++) {
+          let title = titles[j];
 
-          h2Node.setAttribute("class", "toggle");
-          h2Node.nextElementSibling.setAttribute("class", "closed");
+          title.setAttribute("class", "toggle");
+          title.nextElementSibling.setAttribute("class", "closed");
 
-          h2Node.onclick = function () {
-              var h2 = this;
+          title.onclick = function () {
+              let cur = this;
 
-              if (h2.getAttribute("class") == "toggle") {
-                  h2.setAttribute("class", "toggle-active");
-                  h2.nextElementSibling.setAttribute("class", "");
+              if (cur.getAttribute("class") == "toggle") {
+                cur.setAttribute("class", "toggle-active");
+                cur.nextElementSibling.setAttribute("class", "");
               }
               else {
-                  h2.setAttribute("class", "toggle");
-                  h2.nextElementSibling.setAttribute("class", "closed");
+                cur.setAttribute("class", "toggle");
+                cur.nextElementSibling.setAttribute("class", "closed");
               }
           }
       }
